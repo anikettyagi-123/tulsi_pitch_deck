@@ -12,11 +12,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Tinos:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body { font-family: 'Tinos', 'Times New Roman', serif; background-color: #FFF9F0; /* warm off-white */ color: #1F2937; /* dark gray */ }
-    .accent-bg { background-color: #6A1B19; } /* deep maroon */
+    body { font-family: 'Tinos', 'Times New Roman', serif; background-color: #FFF9F0; color: #1F2937; }
+    .accent-bg { background-color: #6A1B19; }
     .accent-text { color: #6A1B19; }
-    .highlight-bg { background-color: #FFF3E0; } /* soft saffron */
-    .highlight-text { color: #E65100; } /* saffron/orange */
+    .highlight-bg { background-color: #FFF3E0; }
+    .highlight-text { color: #E65100; }
     .chart-container { position: relative; width: 100%; max-width: 700px; margin-left: auto; margin-right: auto; height: 350px; max-height: 450px; }
     @media (min-width: 768px) { .chart-container { height: 400px; } }
     .scroll-animate { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
@@ -25,26 +25,22 @@
     .service-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
     .service-card:hover { transform: translateY(-10px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
     .founder-img { object-cover; border: 4px solid #FFF3E0; }
+    .app-screenshot { object-cover; border-radius: 1.5rem; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15); }
   </style>
 </head>
 <body class="antialiased">
-
   <!-- Splash Screen -->
   <div id="splash-screen" class="fixed inset-0 accent-bg z-50 flex flex-col items-center justify-center text-white">
     <div class="text-center px-6">
-      <!-- Logo + Title -->
       <div class="mb-8 flex flex-col items-center space-y-6">
         <img src="https://firebasestorage.googleapis.com/v0/b/pooja-cb29e.appspot.com/o/tulsi%20logooo.jpg?alt=media&token=437663f6-b3fe-4823-8c90-c3519445376e" alt="Tulsi Puja Logo" class="h-28 w-28 md:h-36 md:w-36 rounded-full shadow-2xl border-4 border-white/20 object-cover">
         <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight"> Tulsi – Puja for Everyone </h1>
       </div>
       <p class="text-xl md:text-3xl font-medium mb-12 opacity-95"> Bringing devotion home </p>
-      <!-- Enter Button -->
       <button id="enter-deck-button" class="bg-orange-500 hover:bg-orange-600 text-white font-bold text-xl md:text-2xl py-4 px-12 rounded-full shadow-2xl transition-all duration-300 transform hover:scale-110 border-2 border-white/30"> Enter Deck </button>
     </div>
   </div>
-
   <div id="main-content" class="hidden">
-
     <!-- Sticky Header -->
     <header id="header" class="sticky top-0 z-40 bg-transparent py-4 md:py-6">
       <div class="bg-white mx-4 md:mx-8 lg:mx-20 rounded-xl shadow-lg transition-all duration-300">
@@ -54,9 +50,9 @@
             <span class="font-bold accent-text text-lg hidden sm:inline-block"> Tulsi – Puja for Everyone </span>
           </div>
           <nav class="hidden md:flex space-x-8">
-            <a href="#opportunity" class="highlight-text font-semibold hover:text-orange-600">Opportunity</a>
+            <a href="#problem" class="highlight-text font-semibold hover:text-orange-600">Problem</a>
             <a href="#solution" class="highlight-text font-semibold hover:text-orange-600">Solution</a>
-            <a href="#our-services" class="highlight-text font-semibold hover:text-orange-600">Our Services</a>
+            <a href="#app-showcase" class="highlight-text font-semibold hover:text-orange-600">App Showcase</a>
             <a href="#traction" class="highlight-text font-semibold hover:text-orange-600">Traction</a>
             <a href="#team" class="highlight-text font-semibold hover:text-orange-600">Team</a>
             <a href="#why-invest" class="highlight-text font-semibold hover:text-orange-600">Why Invest?</a>
@@ -69,11 +65,10 @@
             </svg>
           </button>
         </div>
-        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-gray-50 border-t border-gray-200 rounded-b-xl">
-          <a href="#opportunity" class="block py-2 px-6 text-sm highlight-text hover:bg-orange-50">Opportunity</a>
+          <a href="#problem" class="block py-2 px-6 text-sm highlight-text hover:bg-orange-50">Problem</a>
           <a href="#solution" class="block py-2 px-6 text-sm highlight-text hover:bg-orange-50">Solution</a>
-          <a href="#our-services" class="block py-2 px-6 text-sm highlight-text hover:bg-orange-50">Our Services</a>
+          <a href="#app-showcase" class="block py-2 px-6 text-sm highlight-text hover:bg-orange-50">App Showcase</a>
           <a href="#traction" class="block py-2 px-6 text-sm highlight-text hover:bg-orange-50">Traction</a>
           <a href="#team" class="block py-2 px-6 text-sm highlight-text hover:bg-orange-50">Team</a>
           <a href="#why-invest" class="block py-2 px-6 text-sm highlight-text hover:bg-orange-50">Why Invest?</a>
@@ -82,40 +77,47 @@
         </div>
       </div>
     </header>
-
     <main>
-
       <!-- HERO -->
       <section id="hero" class="py-20 bg-white">
         <div class="container mx-auto px-6 text-center scroll-animate">
-          <h2 class="text-4xl md:text-5xl font-bold accent-text mb-4"> Bringing devotion home for every family </h2>
-          <p class="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mb-8"> Tulsi is building a trusted platform for authentic puja services and products – from verified pandits to curated puja kits – starting with Delhi NCR. </p>
-          <div class="bg-gray-100 border-l-4 border-orange-700 text-gray-800 p-6 rounded-lg max-w-2xl mx-auto shadow-sm">
-            <h3 class="text-2xl font-bold accent-text mb-2">Funding Proposal</h3>
-            <p class="text-xl"> Seeking <span class="font-bold highlight-text">₹10–20 Lakhs</span> for <span class="font-bold highlight-text">5% Equity</span> in Tulsi – Puja for Everyone. </p>
-          </div>
+          <h2 class="text-4xl md:text-5xl font-bold accent-text mb-6"> Bringing devotion home for every family </h2>
+          <p class="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto"> Tulsi is building India's most trusted one-stop platform for authentic puja services and premium products — making devotion simple, joyful, and stress-free. </p>
         </div>
       </section>
 
-      <!-- OPPORTUNITY -->
-      <section id="opportunity" class="py-20">
+      <!-- PROBLEM -->
+      <section id="problem" class="py-20">
         <div class="container mx-auto px-6 scroll-animate">
           <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-bold accent-text"> Spirituality is timeless, but access is broken </h2>
-            <p class="mt-4 text-lg text-gray-700 max-w-3xl mx-auto"> Urban families struggle to find trusted pandits, complete samagri, and convenient puja arrangements – despite India’s multi-billion rupee spiritual and religious services market. </p>
+            <h2 class="text-4xl md:text-5xl font-bold accent-text"> The Hidden Hassle Behind Every Home Puja </h2>
+            <p class="mt-6 text-xl text-gray-700 max-w-4xl mx-auto font-medium highlight-text"> Urban families want to perform regular pujas — but the process is so chaotic and time-consuming that most give up. </p>
           </div>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div class="bg-white p-8 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 scroll-animate" style="transition-delay: 100ms;">
-              <h3 class="text-4xl font-bold accent-text">₹50K Cr+</h3>
-              <p class="mt-2 text-gray-600"> Estimated annual spend on religious rituals, temple offerings, and related products in India. </p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+            <div class="bg-red-50 border-l-8 border-red-600 p-8 rounded-r-xl shadow-xl scroll-animate">
+              <h3 class="text-2xl font-bold accent-text mb-6">A Typical Urban Family's Struggle</h3>
+              <ol class="space-y-4 text-lg text-gray-800 list-decimal pl-6">
+                <li>Frantically search for a reliable pandit available on the exact date & time.</li>
+                <li>Get a long samagri list from the pandit.</li>
+                <li>Visit 3–4 different shops: dry samagri, fresh flowers/fruits, prasad ingredients, decor items.</li>
+                <li>Worry about quality, purity, overpricing, and missing items.</li>
+                <li>Spend hours coordinating everything — leaving no energy to actually enjoy the puja.</li>
+              </ol>
+              <p class="mt-8 text-xl font-bold text-red-700">Result: Families perform far fewer pujas than they truly desire.</p>
             </div>
-            <div class="bg-white p-8 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 scroll-animate" style="transition-delay: 200ms;">
-              <h3 class="text-4xl font-bold accent-text">30M+</h3>
-              <p class="mt-2 text-gray-600"> Urban households performing regular pujas, festivals, and rituals. </p>
-            </div>
-            <div class="bg-white p-8 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 scroll-animate" style="transition-delay: 300ms;">
-              <h3 class="text-4xl font-bold accent-text">Fragmented</h3>
-              <p class="mt-2 text-gray-600"> Highly unorganised market with no trusted, tech-enabled national brand. </p>
+            <div class="grid grid-cols-1 gap-8 scroll-animate">
+              <div class="bg-white p-8 rounded-xl shadow-lg text-center">
+                <h3 class="text-5xl font-bold accent-text">₹50K Cr+</h3>
+                <p class="mt-3 text-lg text-gray-600">Annual spend on religious rituals & products in India</p>
+              </div>
+              <div class="bg-white p-8 rounded-xl shadow-lg text-center">
+                <h3 class="text-5xl font-bold accent-text">30M+</h3>
+                <p class="mt-3 text-lg text-gray-600">Urban households wanting regular home pujas</p>
+              </div>
+              <div class="bg-white p-8 rounded-xl shadow-lg text-center">
+                <h3 class="text-5xl font-bold accent-text">Highly Fragmented</h3>
+                <p class="mt-3 text-lg text-gray-600">No trusted, organized national platform exists today</p>
+              </div>
             </div>
           </div>
         </div>
@@ -125,92 +127,67 @@
       <section id="solution" class="py-20 bg-white">
         <div class="container mx-auto px-6 scroll-animate">
           <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-bold accent-text"> Tulsi – a one-stop ecosystem for puja services & products </h2>
-            <p class="mt-4 text-lg text-gray-700 max-w-3xl mx-auto"> We combine verified pandits, curated puja products, and digital convenience to make every ritual simple, authentic, and stress-free. </p>
+            <h2 class="text-4xl md:text-5xl font-bold accent-text"> Tulsi: From Pandit to Prasad — Everything in One Go </h2>
+            <p class="mt-6 text-xl text-gray-700 max-w-4xl mx-auto"> We deliver the complete puja experience: verified pandit + premium samagri + fresh prasad — all delivered together. Families simply participate and enjoy the devotion. No stress. No running around. </p>
+            <p class="mt-4 text-lg font-medium text-gray-700"> This hassle-free experience increases puja frequency and builds lifelong loyalty. </p>
           </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div class="highlight-bg p-6 rounded-lg scroll-animate" style="transition-delay: 100ms;">
-              <h3 class="text-xl font-bold accent-text mb-2">Verified Pandits</h3>
-              <p class="text-gray-700"> Book trained, background-checked pandits for home and community pujas with transparent pricing. </p>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            <div class="highlight-bg p-8 rounded-xl scroll-animate">
+              <h3 class="text-xl font-bold accent-text mb-3">Verified Pandits</h3>
+              <p class="text-gray-700">Background-checked, experienced, transparent pricing.</p>
             </div>
-            <div class="highlight-bg p-6 rounded-lg scroll-animate" style="transition-delay: 200ms;">
-              <h3 class="text-xl font-bold accent-text mb-2">Curated Puja Kits</h3>
-              <p class="text-gray-700"> Ready-to-use samagri kits with all essentials – quality-checked and packaged for different rituals. </p>
+            <div class="highlight-bg p-8 rounded-xl scroll-animate">
+              <h3 class="text-xl font-bold accent-text mb-3">Complete Packages</h3>
+              <p class="text-gray-700">Pandit + full samagri + prasad delivered as one.</p>
             </div>
-            <div class="highlight-bg p-6 rounded-lg scroll-animate" style="transition-delay: 300ms;">
-              <h3 class="text-xl font-bold accent-text mb-2">Wholesale & Retail</h3>
-              <p class="text-gray-700"> Wholesale distribution of Tulsi-branded products plus direct-to-consumer sales via online and offline channels. </p>
+            <div class="highlight-bg p-8 rounded-xl scroll-animate">
+              <h3 class="text-xl font-bold accent-text mb-3">Premium Products</h3>
+              <p class="text-gray-700">Custom kits, upload-your-list, high-quality samagri.</p>
             </div>
-            <div class="highlight-bg p-6 rounded-lg scroll-animate" style="transition-delay: 400ms;">
-              <h3 class="text-xl font-bold accent-text mb-2">Digital Experience</h3>
-              <p class="text-gray-700"> Future roadmap: app-based bookings, subscription pujas, virtual darshan & reminder-based seva offerings. </p>
+            <div class="highlight-bg p-8 rounded-xl scroll-animate">
+              <h3 class="text-xl font-bold accent-text mb-3">Unified Platform</h3>
+              <p class="text-gray-700">App bookings, mantra access, reminders & subscriptions.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- OUR SERVICES -->
-      <section id="our-services" class="py-20">
+      <!-- APP SHOWCASE -->
+      <section id="app-showcase" class="py-20">
         <div class="container mx-auto px-6 scroll-animate">
           <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-bold accent-text"> Our Core Offerings </h2>
-            <p class="mt-4 text-lg text-gray-700 max-w-3xl mx-auto"> Everything you need for authentic puja – available at your fingertips through our app and website. </p>
+            <h2 class="text-3xl md:text-4xl font-bold accent-text"> Live on Android – Experience Tulsi Today </h2>
           </div>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-5xl mx-auto">
-            <a href="https://play.google.com/store/apps/details?id=com.tulsi.pooja_for_everyone" target="_blank" class="service-card bg-white rounded-2xl shadow-xl overflow-hidden">
-              <img src="https://firebasestorage.googleapis.com/v0/b/pooja-cb29e.appspot.com/o/website%2Fbook%20pandit.jpg?alt=media&token=f66e7e4f-4a10-4f41-9e54-501e6c166bf9" alt="Book Pandit Ji" class="w-full h-64 object-cover">
-              <div class="p-6 text-center">
-                <h3 class="text-2xl font-bold accent-text mb-2">Book Pandit Ji</h3>
-                <p class="text-gray-600">Verified, experienced pandits for all occasions</p>
-              </div>
-            </a>
-            <a href="https://play.google.com/store/apps/details?id=com.tulsi.pooja_for_everyone" target="_blank" class="service-card bg-white rounded-2xl shadow-xl overflow-hidden">
-              <img src="https://firebasestorage.googleapis.com/v0/b/pooja-cb29e.appspot.com/o/website%2Fbook%20puja%20.jpg?alt=media&token=7211dbfc-eb2d-4066-bc26-723aca60860d" alt="Book Puja Package" class="w-full h-64 object-cover">
-              <div class="p-6 text-center">
-                <h3 class="text-2xl font-bold accent-text mb-2">Book Puja Package</h3>
-                <p class="text-gray-600">Complete puja packages with pandit & samagri</p>
-              </div>
-            </a>
-            <a href="https://play.google.com/store/apps/details?id=com.tulsi.pooja_for_everyone" target="_blank" class="service-card bg-white rounded-2xl shadow-xl overflow-hidden">
-              <img src="https://firebasestorage.googleapis.com/v0/b/pooja-cb29e.appspot.com/o/website%2Fproducts.png?alt=media&token=0a926655-a1bf-4dde-9e62-863756fb6850" alt="Buy Products" class="w-full h-64 object-cover">
-              <div class="p-6 text-center">
-                <h3 class="text-2xl font-bold accent-text mb-2">Buy Puja Products</h3>
-                <p class="text-gray-600">Curated, high-quality samagri & devotional items</p>
-              </div>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+            <img src="https://firebasestorage.googleapis.com/v0/b/pooja-cb29e.appspot.com/o/screenshot%2FScreenshot_2025-12-20-16-49-47-52_a5f239b142a26f4049d13bc0bfa70783.jpg?alt=media&token=b9a5a632-f423-4830-a212-f854059e3d8c" alt="Book Pandit Ji" class="app-screenshot w-full">
+            <img src="https://firebasestorage.googleapis.com/v0/b/pooja-cb29e.appspot.com/o/screenshot%2FScreenshot_2025-12-20-16-49-52-55_a5f239b142a26f4049d13bc0bfa70783.jpg?alt=media&token=35ba1dc6-11e9-45a8-8f03-4c15e0097312" alt="Complete Puja Package" class="app-screenshot w-full">
+            <img src="https://firebasestorage.googleapis.com/v0/b/pooja-cb29e.appspot.com/o/screenshot%2FScreenshot_2025-12-20-16-50-02-69_a5f239b142a26f4049d13bc0bfa70783.jpg?alt=media&token=70e2153e-daf3-4b93-aeed-e080898cfcce" alt="Premium Products" class="app-screenshot w-full">
+            <img src="https://firebasestorage.googleapis.com/v0/b/pooja-cb29e.appspot.com/o/screenshot%2FScreenshot_2025-12-20-16-50-27-95_a5f239b142a26f4049d13bc0bfa70783.jpg?alt=media&token=839ef0f3-197a-4407-8968-089ad65c3fd5" alt="All Services" class="app-screenshot w-full">
+          </div>
+          <div class="text-center mt-12">
+            <a href="https://play.google.com/store/apps/details?id=com.tulsi.pooja_for_everyone" target="_blank" class="inline-block">
+              <img src="https://firebasestorage.googleapis.com/v0/b/pooja-cb29e.appspot.com/o/website%2Fplay.png?alt=media&token=f869aa4b-9016-4217-b4dd-c48a369c3230" alt="Download on Google Play" class="h-24 md:h-32 mx-auto shadow-lg rounded-lg">
             </a>
           </div>
         </div>
       </section>
 
-      <!-- SMALL CTA -->
-      <section id="cta-website" class="py-10 accent-bg scroll-animate mx-4 md:mx-8 lg:mx-20 rounded-xl">
-        <div class="container mx-auto px-6 text-center">
-          <h2 class="text-2xl md:text-4xl font-bold text-white mb-4"> Experience Tulsi – Puja for Everyone </h2>
-          <p class="text-white text-lg mb-6"> Book pujas, connect with verified pandits, and order authentic puja products through our live digital platforms. </p>
-          <div class="flex flex-col md:flex-row justify-center gap-6 items-center">
-            <a href="https://tulsistore.in" target="_blank" class="bg-white text-orange-600 font-semibold px-8 py-4 rounded-lg shadow hover:bg-orange-50 transition text-lg"> Visit Website: tulsistore.in </a>
-            <a href="https://play.google.com/store/apps/details?id=com.tulsi.pooja_for_everyone" target="_blank" class="flex flex-col items-center">
-              <img src="https://firebasestorage.googleapis.com/v0/b/pooja-cb29e.appspot.com/o/website%2Fplay.png?alt=media&token=f869aa4b-9016-4217-b4dd-c48a369c3230" alt="Download on Google Play" class="h-16">
-              <span class="text-white mt-2 font-medium">Download App: Tulsi – Puja for Everyone</span>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- TRACTION -->
-      <section id="traction" class="py-20">
+      <!-- TRACTION (restored full detail) -->
+      <section id="traction" class="py-20 bg-white">
         <div class="container mx-auto px-6 scroll-animate">
           <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-bold accent-text"> Early traction with strong product-market fit signals </h2>
-            <p class="mt-4 text-lg text-gray-700 max-w-3xl mx-auto"> Our early wholesale and retail sales prove demand for curated, high-quality puja products and organized services. </p>
+            <h2 class="text-3xl md:text-4xl font-bold accent-text"> Early Traction with Strong Product-Market Fit </h2>
+            <p class="mt-4 text-lg text-gray-700 max-w-3xl mx-auto"> Our early wholesale and retail sales prove clear demand for curated, high-quality puja products and organized services. </p>
           </div>
           <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
             <div class="bg-white p-8 rounded-lg shadow-md scroll-animate">
               <h3 class="text-xl font-bold accent-text mb-4">Revenue Traction</h3>
               <p class="text-3xl font-bold text-gray-800 mb-4"> ₹3,00,000+ </p>
-              <p class="text-gray-700 leading-relaxed"> • Over ₹3 Lakhs in wholesale sales of Tulsi-branded puja products to retailers across Delhi-NCR, achieved with minimal marketing through existing relationships.<br><br>
+              <p class="text-gray-700 leading-relaxed"> 
+                • Over ₹3 Lakhs in wholesale sales of Tulsi-branded puja products to retailers across Delhi-NCR, achieved with minimal marketing through existing relationships.<br><br>
                 • Additionally, 15+ complete puja packages booked and delivered via word-of-mouth marketing, demonstrating strong organic demand for organized puja services.<br><br>
-                • Peak demand observed during festivals (Diwali, Navratri, Ganesh Chaturthi) with repeat interest from both retailers and end customers. </p>
+                • Peak demand observed during festivals (Diwali, Navratri, Ganesh Chaturthi) with repeat interest from both retailers and end customers.
+              </p>
             </div>
             <div class="bg-white p-8 rounded-lg shadow-md scroll-animate">
               <h3 class="text-xl font-bold accent-text mb-4">Brand & Product Feedback</h3>
@@ -226,7 +203,7 @@
       </section>
 
       <!-- TEAM -->
-      <section id="team" class="py-20 bg-white">
+      <section id="team" class="py-20">
         <div class="container mx-auto px-6 scroll-animate">
           <div class="text-center mb-12">
             <h2 class="text-3xl md:text-4xl font-bold accent-text"> Meet the Founders </h2>
@@ -237,46 +214,72 @@
               <img src="https://firebasestorage.googleapis.com/v0/b/pooja-cb29e.appspot.com/o/website%2Ftransparent-Photoroom.jpg?alt=media&token=e9e8fa81-9003-4b53-9a4c-d8d38cd090d3" alt="Aniket Tyagi" class="w-56 h-56 mx-auto rounded-full shadow-2xl founder-img object-cover">
               <h3 class="text-2xl font-bold accent-text mt-6">Aniket Tyagi</h3>
               <p class="text-lg text-gray-600">Founder & CEO</p>
-              <p class="mt-4 text-gray-700 max-w-md mx-auto">B.Tech graduate from Hi-Tech Institute of Engineering & Technology. Leads product vision, operations, and business development with a strong foundation in technology and entrepreneurship.</p>
+              <p class="mt-4 text-gray-700 max-w-md mx-auto">B.Tech graduate from Hi-Tech Institute. Leads vision, operations & growth.</p>
             </div>
             <div class="text-center scroll-animate">
               <img src="https://firebasestorage.googleapis.com/v0/b/pooja-cb29e.appspot.com/o/website%2Fayudh.JPG?alt=media&token=2ed92d87-9249-42fe-b6c7-7dd0b89f8cea" alt="Ayush Sharma" class="w-56 h-56 mx-auto rounded-full shadow-2xl founder-img object-cover">
               <h3 class="text-2xl font-bold accent-text mt-6">Ayush Sharma</h3>
               <p class="text-lg text-gray-600">Co-Founder & CTO</p>
-              <p class="mt-4 text-gray-700 max-w-md mx-auto">BCA graduate from Amity University. Drives technology and platform development, ensuring seamless digital experiences for users.</p>
+              <p class="mt-4 text-gray-700 max-w-md mx-auto">BCA from Amity University. Drives tech & platform excellence.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- WHY INVEST -->
-      <section id="why-invest" class="py-20">
+      <!-- WHY INVEST (enhanced with more depth) -->
+      <section id="why-invest" class="py-20 bg-white">
         <div class="container mx-auto px-6 scroll-animate">
           <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-bold accent-text"> Why invest in Tulsi? </h2>
-            <p class="mt-4 text-lg text-gray-700 max-w-3xl mx-auto"> A trusted devotional brand in a timeless category, with clear paths to scale via products, services, and digital experiences. </p>
+            <h2 class="text-4xl md:text-5xl font-bold accent-text"> Why Invest in Tulsi? </h2>
+            <p class="mt-6 text-xl text-gray-700 max-w-4xl mx-auto"> Back a category-defining devotional brand in a massive, evergreen, and highly recurring market — with proven early traction and multiple growth levers. </p>
           </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="highlight-bg p-8 rounded-lg shadow-md scroll-animate" style="transition-delay: 100ms;">
-              <h3 class="text-xl font-bold accent-text mb-4">Massive & Recurring Market</h3>
-              <ul class="space-y-3 text-gray-700">
-                <li>✓ Rituals repeat monthly / yearly → recurring demand.</li>
-                <li>✓ High emotional linkage → strong brand loyalty.</li>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
+            <div class="highlight-bg p-10 rounded-2xl shadow-xl scroll-animate">
+              <h3 class="text-2xl font-bold accent-text mb-6">Evergreen & Recurring Demand</h3>
+              <ul class="space-y-4 text-gray-700 text-lg">
+                <li>✓ ₹50K Cr+ market driven by monthly/yearly rituals</li>
+                <li>✓ Deep emotional connection → lifelong customer loyalty</li>
+                <li>✓ Festival peaks + daily pujas → predictable high repeats</li>
               </ul>
             </div>
-            <div class="highlight-bg p-8 rounded-lg shadow-md scroll-animate" style="transition-delay: 200ms;">
-              <h3 class="text-xl font-bold accent-text mb-4">Brand-able, Organisable Space</h3>
-              <ul class="space-y-3 text-gray-700">
-                <li>✓ Highly fragmented today.</li>
-                <li>✓ Opportunity to build a “go-to” national devotional brand.</li>
+            <div class="highlight-bg p-10 rounded-2xl shadow-xl scroll-animate">
+              <h3 class="text-2xl font-bold accent-text mb-6">Highly Brandable Category</h3>
+              <ul class="space-y-4 text-gray-700 text-lg">
+                <li>✓ Currently completely fragmented & unorganized</li>
+                <li>✓ First-mover advantage to build India’s #1 trusted devotional brand</li>
+                <li>✓ Like “Nykaa for beauty” or “Licious for meat” — Tulsi can own puja</li>
               </ul>
             </div>
-            <div class="highlight-bg p-8 rounded-lg shadow-md scroll-animate" style="transition-delay: 300ms;">
-              <h3 class="text-xl font-bold accent-text mb-4">Multiple Revenue Streams</h3>
-              <ul class="space-y-3 text-gray-700">
-                <li>✓ Product margins (kits, samagri, decor).</li>
-                <li>✓ Commission on pandit services & packages.</li>
-                <li>✓ Subscriptions & seasonal bundles in future.</li>
+            <div class="highlight-bg p-10 rounded-2xl shadow-xl scroll-animate">
+              <h3 class="text-2xl font-bold accent-text mb-6">Multiple High-Margin Revenue Streams</h3>
+              <ul class="space-y-4 text-gray-700 text-lg">
+                <li>✓ 40–60% margins on branded puja kits & products</li>
+                <li>✓ Commission on pandit bookings & complete packages</li>
+                <li>✓ Future: subscriptions, seasonal bundles, virtual services</li>
+              </ul>
+            </div>
+            <div class="highlight-bg p-10 rounded-2xl shadow-xl scroll-animate">
+              <h3 class="text-2xl font-bold accent-text mb-6">Proven Early Validation</h3>
+              <ul class="space-y-4 text-gray-700 text-lg">
+                <li>✓ ₹3L+ revenue with zero paid marketing</li>
+                <li>✓ Organic bookings & wholesale repeat orders</li>
+                <li>✓ Seed investment from respected education leader</li>
+              </ul>
+            </div>
+            <div class="highlight-bg p-10 rounded-2xl shadow-xl scroll-animate">
+              <h3 class="text-2xl font-bold accent-text mb-6">Scalable Tech + Offline Play</h3>
+              <ul class="space-y-4 text-gray-700 text-lg">
+                <li>✓ Live Android app with bookings & e-commerce</li>
+                <li>✓ Easy expansion: Delhi-NCR → Tier 1/2 cities</li>
+                <li>✓ Network effect via pandits & retailer partnerships</li>
+              </ul>
+            </div>
+            <div class="highlight-bg p-10 rounded-2xl shadow-xl scroll-animate">
+              <h3 class="text-2xl font-bold accent-text mb-6">Social & Cultural Impact</h3>
+              <ul class="space-y-4 text-gray-700 text-lg">
+                <li>✓ Reviving home puja traditions for modern families</li>
+                <li>✓ Making authentic devotion accessible to millions</li>
+                <li>✓ Positive, meaningful brand loved by customers</li>
               </ul>
             </div>
           </div>
@@ -287,14 +290,10 @@
       <section id="financials" class="py-20">
         <div class="container mx-auto px-6 scroll-animate">
           <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-bold accent-text"> Clear path from early traction to scalable growth </h2>
-            <p class="mt-4 text-lg text-gray-700 max-w-3xl mx-auto"> With the raise, we plan to expand distribution in Delhi-NCR, invest in branding, and build tech, targeting strong revenue growth over the next 3 years. </p>
+            <h2 class="text-3xl md:text-4xl font-bold accent-text"> Scalable Growth Path </h2>
           </div>
           <div class="chart-container" id="revenueChartContainer">
             <canvas id="revenueChart"></canvas>
-          </div>
-          <div class="text-center mt-8">
-            <p class="text-lg text-gray-800 bg-gray-100 p-4 rounded-md max-w-2xl mx-auto"> Initial focus on high-margin puja kits and samagri, then scaling to service-based and subscription revenue. </p>
           </div>
         </div>
       </section>
@@ -303,46 +302,33 @@
       <section id="investment" class="py-20 bg-white">
         <div class="container mx-auto px-6 scroll-animate">
           <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-bold accent-text"> The investment proposal </h2>
-            <p class="mt-4 text-lg text-gray-700 max-w-3xl mx-auto"> We are seeking a strategic partner to help build Tulsi into the most trusted devotional brand for modern India. </p>
+            <h2 class="text-4xl md:text-5xl font-bold accent-text"> Investment Ask </h2>
           </div>
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div class="scroll-animate">
-              <h3 class="text-2xl font-bold accent-text mb-6">Use of Funds</h3>
-              <div class="chart-container" id="fundsChartContainer" style="height: 300px; max-height: 350px;">
-                <canvas id="fundsChart"></canvas>
+          <div class="max-w-4xl mx-auto">
+            <div class="bg-orange-50 border-l-8 border-orange-600 p-10 rounded-r-2xl shadow-2xl scroll-animate">
+              <h3 class="text-3xl font-bold accent-text mb-6">We are raising</h3>
+              <p class="text-4xl md:text-5xl font-bold highlight-text mb-8"> ₹10–20 Lakhs for 5% Equity </p>
+              <p class="text-xl text-gray-800 mb-8">To fuel product expansion, branding, tech enhancement, and Delhi-NCR growth.</p>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
+                <div>
+                  <h4 class="text-2xl font-bold accent-text mb-4">Use of Funds</h4>
+                  <div class="chart-container" id="fundsChartContainer" style="height: 320px;">
+                    <canvas id="fundsChart"></canvas>
+                  </div>
+                </div>
+                <div class="space-y-6">
+                  <h4 class="text-2xl font-bold accent-text mb-4">Investor Benefits</h4>
+                  <ul class="space-y-5 text-lg">
+                    <li class="flex"><span class="text-2xl accent-text mr-4">✓</span> <span><strong>5% equity</strong> at ₹10–20 Lakhs investment</span></li>
+                    <li class="flex"><span class="text-2xl accent-text mr-4">✓</span> <span>Exposure to high-growth devotional products & services</span></li>
+                    <li class="flex"><span class="text-2xl accent-text mr-4">✓</span> <span>Back a category-defining brand in an evergreen market</span></li>
+                  </ul>
+                </div>
               </div>
-            </div>
-            <div class="bg-white p-8 rounded-lg shadow-lg scroll-animate">
-              <h3 class="text-2xl font-bold accent-text mb-6">Offer to Investor</h3>
-              <ul class="space-y-4">
-                <li class="flex items-start">
-                  <span class="accent-text font-bold text-xl mr-3">✓</span>
-                  <div>
-                    <h4 class="font-bold text-lg">Equity Ownership</h4>
-                    <p class="text-gray-600"> <span class="font-semibold">5% equity</span> for an investment of <span class="font-semibold">₹10–20 Lakhs</span> (valuation range negotiable). </p>
-                  </div>
-                </li>
-                <li class="flex items-start">
-                  <span class="accent-text font-bold text-xl mr-3">✓</span>
-                  <div>
-                    <h4 class="font-bold text-lg">Profit Participation</h4>
-                    <p class="text-gray-600"> Exposure to product and service-based upside as we expand across Delhi-NCR and beyond. </p>
-                  </div>
-                </li>
-                <li class="flex items-start">
-                  <span class="accent-text font-bold text-xl mr-3">✓</span>
-                  <div>
-                    <h4 class="font-bold text-lg">Brand & Category Leadership</h4>
-                    <p class="text-gray-600"> Opportunity to back a category-creating devotional brand in an evergreen market. </p>
-                  </div>
-                </li>
-              </ul>
             </div>
           </div>
         </div>
       </section>
-
     </main>
 
     <!-- FOOTER -->
@@ -350,27 +336,22 @@
       <div class="container mx-auto px-6 text-center">
         <h3 class="text-2xl font-bold mb-4"> Join us in bringing devotion home </h3>
         <p class="mb-6">Aniket Tyagi | Founder, Tulsi – Puja for Everyone</p>
-        <div class="flex flex-wrap justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 md:space-x-6">
+        <div class="flex flex-wrap justify-center gap-4 md:gap-8">
           <a href="mailto:support@tulsistore.in" class="hover:text-orange-200"> support@tulsistore.in </a>
-          <span class="hidden sm:inline">•</span>
           <a href="tel:+919211507185" class="hover:text-orange-200"> +91-9211507185 </a>
-          <span class="hidden sm:inline">•</span>
-          <a href="https://tulsistore.in" target="_blank" rel="noopener noreferrer" class="hover:text-orange-200"> tulsistore.in </a>
+          <a href="https://tulsistore.in" target="_blank" class="hover:text-orange-200"> tulsistore.in </a>
         </div>
         <p class="text-sm mt-8 text-orange-100"> Tulsi – Puja for Everyone · Delhi-NCR, India </p>
       </div>
     </footer>
-
   </div>
 
-  <!-- JS: splash, menus, animations, charts -->
+  <!-- JS -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const splashScreen = document.getElementById('splash-screen');
       const enterDeckButton = document.getElementById('enter-deck-button');
       const mainContent = document.getElementById('main-content');
-
-      // Splash screen logic
       enterDeckButton.addEventListener('click', () => {
         splashScreen.style.opacity = '0';
         splashScreen.style.pointerEvents = 'none';
@@ -379,116 +360,51 @@
           mainContent.classList.remove('hidden');
         }, 700);
       });
-
-      // Mobile menu logic
       const mobileMenuButton = document.getElementById('mobile-menu-button');
       const mobileMenu = document.getElementById('mobile-menu');
       const navLinks = document.querySelectorAll('#mobile-menu a, #header nav a');
-      mobileMenuButton.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-      });
-      navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-          if (!mobileMenu.classList.contains('hidden')) {
-            mobileMenu.classList.add('hidden');
-          }
-        });
-      });
+      mobileMenuButton.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+      navLinks.forEach(link => link.addEventListener('click', () => mobileMenu.classList.contains('hidden') || mobileMenu.classList.add('hidden')));
 
       let revenueChart = null;
       let fundsChart = null;
-
-      // Revenue chart
       const createRevenueChart = () => {
         const ctx = document.getElementById('revenueChart')?.getContext('2d');
         if (!ctx) return;
         revenueChart = new Chart(ctx, {
           type: 'bar',
-          data: {
-            labels: ['Year 1', 'Year 2', 'Year 3'],
-            datasets: [{
-              label: 'Projected Revenue (in Lakhs)',
-              data: [12, 35, 80],
-              backgroundColor: 'rgba(230, 81, 0, 0.85)',
-              borderColor: 'rgba(106, 27, 25, 1)',
-              borderWidth: 1,
-              borderRadius: 5
-            }]
-          },
-          options: {
-            animation: { duration: 1500, easing: 'easeInOutQuart' },
-            responsive: true,
-            maintainAspectRatio: false,
-            scales: { y: { beginAtZero: true, title: { display: true, text: 'Revenue (₹ Lakhs)' } } },
-            plugins: {
-              legend: { display: false },
-              tooltip: { callbacks: { label: (context) => `₹${context.raw} Lakhs` } },
-              title: { display: true, text: 'Projected Revenue Growth (Illustrative)', font: { size: 18, family: "'Tinos', 'Times New Roman', serif" }, padding: { bottom: 20 } }
-            }
-          }
+          data: { labels: ['Year 1', 'Year 2', 'Year 3'], datasets: [{ label: 'Projected Revenue (in Lakhs)', data: [12, 35, 80], backgroundColor: 'rgba(230, 81, 0, 0.85)', borderColor: 'rgba(106, 27, 25, 1)', borderWidth: 1, borderRadius: 5 }] },
+          options: { animation: { duration: 1500, easing: 'easeInOutQuart' }, responsive: true, maintainAspectRatio: false, scales: { y: { beginAtZero: true, title: { display: true, text: 'Revenue (₹ Lakhs)' } } }, plugins: { legend: { display: false }, tooltip: { callbacks: { label: (c) => `₹${c.raw} Lakhs` } }, title: { display: true, text: 'Projected Revenue Growth', font: { size: 18 } } } }
         });
       };
-
-      // Use-of-funds chart
       const createFundsChart = () => {
         const ctx = document.getElementById('fundsChart')?.getContext('2d');
         if (!ctx) return;
         fundsChart = new Chart(ctx, {
           type: 'doughnut',
-          data: {
-            labels: ['Product & Inventory', 'Branding & Marketing', 'Tech & Platform', 'Team & Operations', 'Working Capital'],
-            datasets: [{
-              label: 'Use of Funds',
-              data: [30, 25, 20, 15, 10],
-              backgroundColor: ['#6A1B19', '#E65100', '#FFB74D', '#8D6E63', '#FBC02D'],
-              borderColor: '#FFF9F0',
-              borderWidth: 2
-            }]
-          },
-          options: {
-            animation: { duration: 1500, easing: 'easeInOutQuart' },
-            responsive: true,
-            maintainAspectRatio: false,
-            plugins: {
-              legend: { position: 'bottom' },
-              tooltip: { callbacks: { label: (context) => `${context.label}: ${context.raw}%` } },
-              title: { display: true, text: 'Planned Allocation of Investment', font: { size: 16, family: "'Tinos', 'Times New Roman', serif" }, padding: { bottom: 15 } }
-            }
-          }
+          data: { labels: ['Product & Inventory', 'Branding & Marketing', 'Tech & Platform', 'Team & Operations', 'Working Capital'], datasets: [{ data: [30, 25, 20, 15, 10], backgroundColor: ['#6A1B19', '#E65100', '#FFB74D', '#8D6E63', '#FBC02D'], borderColor: '#FFF9F0', borderWidth: 2 }] },
+          options: { animation: { duration: 1500, easing: 'easeInOutQuart' }, responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom' }, tooltip: { callbacks: { label: (c) => `${c.label}: ${c.raw}%` } }, title: { display: true, text: 'Use of Funds', font: { size: 16 } } } }
         });
       };
 
-      // Scroll animations
-      const observerOptions = { root: null, rootMargin: '0px', threshold: 0.1 };
-      const animatedElements = document.querySelectorAll('.scroll-animate');
-      const animationObserver = new IntersectionObserver((entries) => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add('is-visible');
+        });
+      }, { threshold: 0.1 });
+      document.querySelectorAll('.scroll-animate').forEach(el => observer.observe(el));
+
+      const chartObserver = new IntersectionObserver((entries, obs) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
+            if (entry.target.id === 'revenueChartContainer' && !revenueChart) createRevenueChart();
+            if (entry.target.id === 'fundsChartContainer' && !fundsChart) createFundsChart();
+            obs.unobserve(entry.target);
           }
         });
-      }, observerOptions);
-      animatedElements.forEach(el => animationObserver.observe(el));
-
-      // Chart observers – lazy init
-      const chartObserverOptions = { root: null, rootMargin: '0px', threshold: 0.5 };
-      const chartObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (!entry.isIntersecting) return;
-          if (entry.target.id === 'revenueChartContainer' && !revenueChart) {
-            createRevenueChart();
-          }
-          if (entry.target.id === 'fundsChartContainer' && !fundsChart) {
-            createFundsChart();
-          }
-          observer.unobserve(entry.target);
-        });
-      }, chartObserverOptions);
-
-      const revenueChartContainer = document.getElementById('revenueChartContainer');
-      const fundsChartContainer = document.getElementById('fundsChartContainer');
-      if (revenueChartContainer) chartObserver.observe(revenueChartContainer);
-      if (fundsChartContainer) chartObserver.observe(fundsChartContainer);
+      }, { threshold: 0.5 });
+      document.getElementById('revenueChartContainer') && chartObserver.observe(document.getElementById('revenueChartContainer'));
+      document.getElementById('fundsChartContainer') && chartObserver.observe(document.getElementById('fundsChartContainer'));
     });
   </script>
 </body>
