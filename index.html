@@ -88,34 +88,33 @@
 
 <main>
 
-  <!-- HERO (UPDATED) -->
-  <section id="hero" class="py-20 bg-white">
-    <div class="container mx-auto px-6 scroll-animate">
+<!-- HERO (UPDATED) -->
+<section id="hero" class="py-20 bg-white">
+  <div class="container mx-auto px-6 scroll-animate">
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+    <div class="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 max-w-4xl mx-auto">
 
-        <!-- TEXT -->
-        <div>
-          <h2 class="text-4xl md:text-5xl font-bold accent-text mb-6">
-            Bringing devotion home for every family
-          </h2>
-          <p class="text-lg md:text-xl text-gray-700">
-            Tulsi is building India's most trusted one-stop platform for authentic puja services and premium products — making devotion simple, joyful, and stress-free.
-          </p>
-        </div>
+      <!-- LOGO (LEFT & SMALLER) -->
+      <div class="flex-shrink-0">
+        <img src="https://firebasestorage.googleapis.com/v0/b/pooja-cb29e.appspot.com/o/tulsi%20logooo.jpg?alt=media&token=437663f6-b3fe-4823-8c90-c3519445376e"
+             class="w-28 h-28 md:w-36 md:h-36 rounded-full shadow-xl border-4 border-orange-100 object-cover">
+      </div>
 
-        <!-- LOGO IMAGE -->
-        <div class="text-center">
-          <img src="https://firebasestorage.googleapis.com/v0/b/pooja-cb29e.appspot.com/o/tulsi%20logooo.jpg?alt=media&token=437663f6-b3fe-4823-8c90-c3519445376e"
-               class="w-48 h-48 md:w-64 md:h-64 rounded-full shadow-2xl border-4 border-orange-100 mx-auto object-cover">
-        </div>
-
+      <!-- TEXT (RIGHT) -->
+      <div class="text-center md:text-left">
+        <h2 class="text-4xl md:text-5xl font-bold accent-text mb-4 leading-tight">
+          Bringing devotion home for every family
+        </h2>
+        <p class="text-lg md:text-xl text-gray-700">
+          Tulsi is building India's most trusted one-stop platform for authentic puja services and premium products — making devotion simple, joyful, and stress-free.
+        </p>
       </div>
 
     </div>
-  </section>
 
-    <!-- PROBLEM -->
+  </div>
+</section>
+<!-- PROBLEM -->
 <section id="problem" class="py-20">
   <div class="container mx-auto px-6 scroll-animate">
     
@@ -129,21 +128,15 @@
     </div>
 
     <!-- UPDATED LAYOUT -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto items-center">
+    <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12 max-w-6xl mx-auto">
 
-      <!-- IMAGE (NEW) -->
-      <div class="text-center">
-        <img src="https://firebasestorage.googleapis.com/v0/b/pooja-cb29e.appspot.com/o/website%2FChatGPT%20Image%20Apr%2016%2C%202026%2C%2003_18_51%20PM.png?alt=media&token=b44c79b1-a623-4049-b61c-01147dbaac20"
-             alt="Urban Puja Struggle"
-             class="w-full rounded-2xl shadow-2xl">
-      </div>
-
-      <!-- ORIGINAL LEFT + RIGHT COMBINED -->
-      <div class="space-y-8">
-
-        <!-- STRUGGLE BOX -->
+      <!-- LEFT: CONTENT -->
+      <div class="flex-1">
         <div class="bg-red-50 border-l-8 border-red-600 p-8 rounded-r-xl shadow-xl">
-          <h3 class="text-2xl font-bold accent-text mb-6">A Typical Urban Family's Struggle</h3>
+          <h3 class="text-2xl font-bold accent-text mb-6">
+            A Typical Urban Family's Struggle
+          </h3>
+
           <ol class="space-y-4 text-lg text-gray-800 list-decimal pl-6">
             <li>Frantically search for a reliable pandit available on the exact date & time.</li>
             <li>Get a long samagri list from the pandit.</li>
@@ -151,33 +144,24 @@
             <li>Worry about quality, purity, overpricing, and missing items.</li>
             <li>Spend hours coordinating everything — leaving no energy to actually enjoy the puja.</li>
           </ol>
+
           <p class="mt-8 text-xl font-bold text-red-700">
             Result: Families perform far fewer pujas than they truly desire.
           </p>
         </div>
+      </div>
 
-        <!-- STATS -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div class="bg-white p-6 rounded-xl shadow-lg text-center">
-            <h3 class="text-4xl font-bold accent-text">₹50K Cr+</h3>
-            <p class="mt-2 text-gray-600">Annual spend on religious rituals & products in India</p>
-          </div>
-          <div class="bg-white p-6 rounded-xl shadow-lg text-center">
-            <h3 class="text-4xl font-bold accent-text">30M+</h3>
-            <p class="mt-2 text-gray-600">Urban households wanting regular home pujas</p>
-          </div>
-          <div class="bg-white p-6 rounded-xl shadow-lg text-center">
-            <h3 class="text-4xl font-bold accent-text">Highly Fragmented</h3>
-            <p class="mt-2 text-gray-600">No trusted, organized national platform exists today</p>
-          </div>
-        </div>
-
+      <!-- RIGHT: IMAGE -->
+      <div class="flex-1 text-center">
+        <img src="https://firebasestorage.googleapis.com/v0/b/pooja-cb29e.appspot.com/o/website%2FChatGPT%20Image%20Apr%2016%2C%202026%2C%2003_18_51%20PM.png?alt=media&token=b44c79b1-a623-4049-b61c-01147dbaac20"
+             alt="Urban Puja Struggle"
+             class="w-full max-w-md mx-auto rounded-2xl shadow-2xl">
       </div>
 
     </div>
+
   </div>
 </section>
-
     <!-- SOLUTION -->
 <section id="solution" class="py-20 bg-white">
   <div class="container mx-auto px-6 scroll-animate">
@@ -194,7 +178,7 @@
       </p>
     </div>
 
-    <!-- UPDATED GRID -->
+    <!-- UPDATED GRID (6 ITEMS) -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
 
       <div class="highlight-bg p-8 rounded-xl scroll-animate">
@@ -212,25 +196,17 @@
         <p class="text-gray-700">Custom kits, upload-your-list, high-quality samagri.</p>
       </div>
 
-      <!-- NEW -->
+      <!-- MERGED -->
       <div class="highlight-bg p-8 rounded-xl scroll-animate">
-        <h3 class="text-xl font-bold accent-text mb-3">Mantra, Chalisa & Aarti</h3>
-        <p class="text-gray-700">Easy access to daily mantras, chalisa, and aarti anytime.</p>
+        <h3 class="text-xl font-bold accent-text mb-3">Mantra, Aarti & Festival Pujas</h3>
+        <p class="text-gray-700">Access daily mantras, chalisa, aarti and curated pujas for festivals like Diwali, Navratri & more.</p>
       </div>
 
-      <!-- NEW -->
-      <div class="highlight-bg p-8 rounded-xl scroll-animate">
-        <h3 class="text-xl font-bold accent-text mb-3">Festival Pujas</h3>
-        <p class="text-gray-700">Special curated pujas for Diwali, Navratri, Ganesh Chaturthi & more.</p>
-      </div>
-
-      <!-- NEW -->
       <div class="highlight-bg p-8 rounded-xl scroll-animate">
         <h3 class="text-xl font-bold accent-text mb-3">Religious Travel</h3>
         <p class="text-gray-700">Travel to sacred places and book pujas at temples seamlessly.</p>
       </div>
 
-      <!-- NEW -->
       <div class="highlight-bg p-8 rounded-xl scroll-animate">
         <h3 class="text-xl font-bold accent-text mb-3">Spiritual Products</h3>
         <p class="text-gray-700">Paitings, lockets, pendants and other devotional items.</p>
